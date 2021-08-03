@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE JS</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <h2>{{subtitulo}}</h2>
+        <br>
+        <input type="text" placeholder="marca" v-model="nueva_marca" @keyup.enter="agregarAuto">
+        <button @click="agregarAuto">Agregar</button>
+        <ul>
+            <li v-for="auto of lista_autos">
+                {{auto.marca}} ${{auto.precio}}
+                <span v-if="auto.cantidad <= 0"><strong>[Sin Stock]</strong></span>
+                <br>
+                Disponible. <input type="number" v-model.number="auto.cantidad">
+                <button @click="auto.cantidad++">+</button>
+                <button @click="auto.cantidad--">-</button>
+            </li>
+        </ul>
+        <h2>Total Autos: {{totalAutos}}</h2>
+        <h2>Total Capital: ${{totalCapital}}</h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="02.js"></script>
+</body>
+</html>

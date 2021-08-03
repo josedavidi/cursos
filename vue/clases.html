@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>VUE CLASES</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col mt-4">
+                <h1>{{titulo}}</h1>
+                <div :class="['py-2','text-white',fondo]">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, culpa sequi! Enim voluptas iste suscipit sit rem culpa, dignissimos eos porro amet sint, temporibus aspernatur ratione voluptatibus animi. Magnam, laborum.</p>
+                </div>
+                <input type="text" :class="'my-4 form-control'" v-model="fondo">
+                <div :class="{'text-white':color}">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cumque nisi recusandae omnis aliquid dolore aperiam maiores, officiis expedita dolorum laborum modi, blanditiis soluta voluptatum totam delectus explicabo voluptatem doloribus!</p>
+                </div>
+                <button class="btn btn-info" @click="color=!color">Color Texto</button>
+
+                <div :class="['my-4', colorTXT]">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam amet suscipit recusandae, in dicta officiis ut dolores quis, inventore dolore ratione fugiat laboriosam blanditiis, eaque sapiente voluptas nostrum ullam accusamus!</p>
+                </div>
+                <button class="btn btn-success" @click="colorTXT='text-success'">ok</button>
+                <button class="btn btn-danger" @click="colorTXT='text-danger'">ok</button>
+                <button class="btn btn-primary" @click="colorTXT='text-primary'">ok</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="clases.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE 01</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <h2>{{subtitulo}}</h2>
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+        <button @click="agregarFruta">Agregar</button>
+        <ul>
+            <li v-for="fruta of frutas">{{fruta}}</li>
+        </ul>
+        <hr>
+        <input placeholder="marca" type="text" v-model="nuevoMovil">
+        <input placeholder="precio" type="text" v-model="precio" @keyup.enter="agregarMovil">
+        <button @click="agregarMovil">Agregar</button>
+        <ul>
+            <li v-for="movil of moviles">
+                {{movil.marca}} - ${{movil.preciom}}
+                &nbsp;<span v-if="movil.preciom <=200">Economico</span>
+            </li>
+        </ul>
+        <hr>
+        <input type="text" placeholder="modelo">
+        <button>Agregar</button>
+        <ul>
+            <li v-for="auto of autos">
+                <input type="text" v-model="auto.precio">
+                {{auto.modelo}}
+                <button>+</button>
+            </li>
+            <!-- <span v-if="auto.precio <= 10000">Gama Baja</span> -->
+        </ul>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="01.js"></script>
+</html>

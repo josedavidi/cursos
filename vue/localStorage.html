@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/67d9f0f62c.js" crossorigin="anonymous"></script>
+    <title>Local Storage</title>
+  </head>
+  <body id="bg">
+    <div class="container" :class="['bg', fondo]" id="app">
+        <div class="row">
+            <div class="col-sm-12 my-4 d-flex justify-content-center">
+                <div>
+                    <button class="btn btn-primary" @click="cambiarColor('btn-primary')">Primary</button>
+                    <button class="btn btn-success" @click="cambiarColor('btn-success')">Success</button>
+                    <button class="btn btn-dark" @click="cambiarColor('btn-dark')">Dark</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="localStorage.js"></script>
+  </body>
+</html>
