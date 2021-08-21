@@ -15,22 +15,22 @@ class ServicesSeeder extends Seeder
             [
                 'name'      =>  'Web Developer',
                 'price'     =>  300,
-                'status'    =>  true,
+                'status'    =>  false,
             ],
             [
                 'name'      =>  'Marketing Digital',
                 'price'     =>  500,
-                'status'    =>  true,
+                'status'    =>  false,
             ],
             [
                 'name'      =>  'Graphic Design',
                 'price'     =>  240,
-                'status'    =>  true,
+                'status'    =>  false,
             ],
             [
                 'name'      =>  'Teacher',
                 'price'     =>  20,
-                'status'    =>  true,
+                'status'    =>  false,
             ]
         ];
 
