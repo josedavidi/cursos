@@ -24,7 +24,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "moment": "^2.29.1",
-        "toastr": "^2.1.4"
+        "toastr": "^2.1.4",
+        "vue-infinite-scroll": "^2.0.2"
     }
 }

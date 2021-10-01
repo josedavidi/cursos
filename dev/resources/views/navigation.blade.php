@@ -12,6 +12,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('service')}}">Services</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('acercons')}}">Acercons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('infinite')}}">Infinite Loading</a>
+        </li>
       </ul>
       <span class="navbar-text">
         <a href="{{route('login')}}">Login</a>

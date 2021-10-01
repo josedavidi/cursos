@@ -13,6 +13,10 @@ Route::get('service', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('acercons', 'HomeController@acercons')->name('acercons');
+
+Route::get('acercons-getProducts', 'ProductsController@getProducts')->name('acercons_get_productos');
+Route::get('acercons-updateProducts', 'ProductsController@updateProduct')->name('acercons_update_products');
 
 //AXIOS
 
@@ -24,3 +28,7 @@ Route::get('service-detail/{id}','ServiceController@serviceData')->name('service
 
 Route::view('contact','contact');
 
+
+Route::get('infinite-loading', 'HomeController@infinite')->name('infinite');
+
+Route::get('infi', 'HomeController@getPosts')->name('infiniteGet');
